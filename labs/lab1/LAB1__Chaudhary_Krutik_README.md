@@ -1,8 +1,6 @@
 
 # LAB 1
 
-**[Optional]** If what is being submitted is an individual Lab or Assignment. Otherwise, include a brief one paragraph description about the project.
-
 * *Date Created*: 21 09 2023
 * *Last Modification Date*: 21 09 2023
 * *Lab URL*: https://web.cs.dal.ca/~kchaudhary/csci2170/lab1/
@@ -13,23 +11,11 @@
 * [Krutik Chaudhary](kr954026@dal.ca) - *(Student)*
 
 
-## Getting Started
-
-
 
 ### Prerequisites
 
-To have a local copy of this lab / assingnment / project up and running on your local machine, you will first need to install the following software / libraries / plug-ins
 
-```
 To complete this lab I used FileZilla, IntelliJ (IDE to write code), dal cs gitlab.
-
-```
-
-See the following section for detailed step-by-step instructions on how to install this software / libraries / plug-ins
-
-### Installing
-
 
 
 ## Running the tests
@@ -67,12 +53,9 @@ Math-Hub session is over
 
 
 
-## Deployment
-
-
 ## Built With
 
-<!--- Provide a list of the frameworks used to build this application, your list should include the name of the framework used, the url where the framework is available for download and what the framework was used for, see the example below --->
+
 
 * [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
 * [Maven](https://maven.apache.org/) - Dependency Management
