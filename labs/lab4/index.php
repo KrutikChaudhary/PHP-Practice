@@ -91,18 +91,27 @@
         $errors = [];
 
         // First Name validation
-        if (!preg_match('/^[a-zA-Z]+( [a-zA-Z]+)*$/', $firstName)) {
+        $filteredFirstName = filter_var($firstName, FILTER_SANITIZE_STRING);
+        if (!($filteredFirstName !== false && preg_match('/^[A-Za-z]+( [A-Za-z]+)?$/', $filteredFirstName))) {
             $errors[] = "First Name is not valid.";
         }
 
         // Last Name validation
-        if (!preg_match('/^[a-zA-Z\'-]+( [a-zA-Z\'-]+)*$/', $lastName)) {
+        $filteredLastName = filter_var($lastName, FILTER_SANITIZE_STRING);
+        if (!($filteredLastName !== false && preg_match("/^[A-Za-z'-]+$/", $filteredLastName))) {
             $errors[] = "Last Name is not valid.";
         }
 
         // Email validation
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $filteredEmail = filter_var($email, FILTER_SANITIZE_EMAIL);
+        if (!filter_var($filteredEmail, FILTER_VALIDATE_EMAIL)) {
             $errors[] = "E-mail is not valid.";
+        }
+
+        if (strlen($password) >= 12 && preg_match('/[0-9]/', $password) && preg_match('/[A-Z]/', $password) && preg_match('/[a-z]/', $password) && preg_match('/[^a-zA-Z0-9]/', $password)) {
+            // Password is valid
+        } else {
+            $errors[] = "Password is not valid. 12 characters long , at least one number, one uppercase letter, one lowercase letter, and one special character.";
         }
 
         // Confirm Password validation
@@ -121,6 +130,7 @@
             }
         }
     }
+    
     ?>
 </body>
 </html>
