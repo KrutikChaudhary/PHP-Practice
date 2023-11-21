@@ -1,0 +1,14 @@
+echo '">';
+echo '<div class="album-image">';
+echo '<img src="./images/' . $album["ImageFile"] . '" alt="Album Cover">';
+echo '</div>';
+echo '<div class="album-info">';
+echo '<div class="album-details">';
+echo '<span class="album-title">Title:</span> ' . $album["AlbumTitle"] . '<br>';
+echo '<span class="album-title">Band:</span> ' . $album["BandName"] . '<br>';
+echo '<span class="album-title">Price:</span> ' . $album["Price"] . '<br>';
+echo '<span class="album-title">Year:</span> ' . $album["Year"] . '<br>';
+echo '<span class="album-title">Genres:</span> ' . $album["Genres"] . '<br>';
+echo '</div>';
+echo '</div>';
+echo '</div>';
