@@ -1,0 +1,84 @@
+/* .album-new-line {
+    clear: left;
+}
+
+.album-info {
+    margin-bottom: 10px;
+}
+
+.album-title {
+    font-weight: bold;
+}
+
+.album-details {
+    text-align: left;
+}
+
+.album-container {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #955050;
+    width: 250px;
+    height: auto;
+    text-align: center;
+}
+
+.top-right {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: aqua;
+}
+
+img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+}
+
+.album-new-line {
+    clear: none;
+}
+
+.music-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+} */
+.music-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.album-container {
+    width: 250px;
+    /* Adjust the width as needed */
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    box-sizing: border-box;
+    /* Add this to include padding and border in the width */
+}
+
+.album-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.top-right {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: aqua;
+}
