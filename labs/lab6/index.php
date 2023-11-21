@@ -1,15 +1,7 @@
 <?php
-include './arrays/arrays1.php';
 session_start();
-
-// Check if the username session variable is set
 if (isset($_SESSION['username'])) {
     $loggedInUsername = $_SESSION['username'];
-    // Now $loggedInUsername contains the username, which you can use in your header
-} else {
-    // Redirect to the login page if the user is not logged in
-    header("Location: login.php");
-    exit();
 }
 ?>
 
@@ -20,36 +12,27 @@ if (isset($_SESSION['username'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Store</title>
-    <link rel="stylesheet" type="text/css" href="./css/styles.css">
-    <!-- Inside your HTML header section -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
     <div class="top-right">
+        <a href="login.php">Login</a><br>
         <a href="cart.php">Shopping Cart (
             <?php echo isset($_SESSION['cart_count']) ? $_SESSION['cart_count'] : '0'; ?> items)
         </a>
     </div>
 
-</head>
-
-<body>
     <h1>Welcome to the Music Store,
         <?php echo $loggedInUsername; ?>!
     </h1>
 
-    <div class="top-right">
-        <a href="login.php">Login</a>
-    </div>
     <div class="music-container">
         <?php
-
-        $totalAlbums = count($albums_data);
-
+        include 'music.php'; // Added semicolon here
         for ($i = 0; $i < $totalAlbums; $i++) {
             $album = $albums_data[$i];
-            echo '<div class="album-container';
-            if ($i == 4) {
-                echo ' album-new-line';
-            }
-            echo '">';
+            echo '<div class="album-container">';
             echo '<div class="album-image">';
             echo '<img src="./images/' . $album["ImageFile"] . '" alt="Album Cover">';
             echo '</div>';
@@ -66,17 +49,16 @@ if (isset($_SESSION['username'])) {
             echo '<input type="submit" name="buy_button" value="Buy">';
             echo '</form>';
             echo '</div>';
-
+            echo '</div>';
+            echo '</div>';
         }
         ?>
-        <br>
-        <a href="index.php" class="btn btn-primary">Go to Home Page</a>
-
-        <a href="motivation.php" class="btn btn-primary">Motivation Music Page</a>
-
     </div>
 
+    <a href="index.php" class="btn btn-primary">Go to Home Page</a>
+    <a href="motivation.php" class="btn btn-primary">Motivation Music Page</a>
+
+    <?php include './src/footer.php'; ?>
 </body>
-<? include './src/footer.php'; ?>
 
 </html>
