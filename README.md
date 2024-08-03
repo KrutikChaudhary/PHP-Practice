@@ -1,2 +1,2 @@
 # CSCI 2170
-PHP - PRACTICE.
+PHP - Practice.
